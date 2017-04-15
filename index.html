@@ -2,43 +2,38 @@
 <html>
 <!-- Head -->
 <head>
-	<title>Book Finder</title>
-  <link rel="shortcut icon" type="text/css" href="../../Rose.ico">    
+	<title>Wikipedia Viewer</title>
+  	<link rel="shortcut icon" type="text/css" href="../../Rose.ico">    
+	
+	<!-- 	bootstrap -->	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- fonts and stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-
-	<link rel="stylesheet" href="css/animate.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/animate.css">
 
+	<!-- responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
+
 <!-- Body -->
-<body>
+<body ng-app = "WikiApp">
+	<form ng-submit = "search()">
+		<input type="text" ng-model="searchTxt">
+		<button type="button">Search</button>
+	</form>
 
-<header>
-  <div class="content">
-    <h1>Find a Book</h1>
-
-    <form>
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" id="search">
-        </div>
-        <button type="reset" class="btn btn-default" id="button">Submit</button>
-    </form>
-  </div>
-</header>
-
-
-		
-		<div id="results"></div>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
-<script src="js/main.js"></script>
+  
+	<!-- javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> 
+	<script src="js/main.js"></script>
 </body>
 
 </html>
